@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Codes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: monospace;
+      user-select: none;
+      background: #f9fafb;
+      position: relative;
+      overflow: hidden;
+    }
+    #number {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    #counter {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: gray;
+    }
+    .nav-label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: rgba(0,0,0,0.4);
+      pointer-events: none;
+      font-family: sans-serif;
+    }
+    .nav-left {
+      left: 1rem;
+    }
+    .nav-right {
+      right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="qrcode"></canvas>
+  <div id="number"></div>
+  <div id="counter"></div>
+
+  <div class="nav-label nav-left">⬅ prev</div>
+  <div class="nav-label nav-right">next ➡</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
